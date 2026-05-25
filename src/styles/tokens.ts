@@ -80,6 +80,52 @@ export const tokens = {
     trustList:
       "mt-4 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm font-medium text-slate-400",
   },
+  section: {
+    intro: "max-w-2xl",
+    eyebrow:
+      "text-xs font-semibold uppercase tracking-[0.24em] text-sky-300",
+    title:
+      "text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl lg:text-5xl",
+    titleLg:
+      "text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl lg:text-6xl",
+    description:
+      "mt-5 max-w-xl text-base leading-7 text-slate-300 sm:text-[1.0625rem] sm:leading-8",
+    surface:
+      "rounded-[28px] border border-white/10 bg-white/[0.03]",
+    surfaceDark:
+      "rounded-[28px] border border-white/10 bg-slate-950/70 shadow-2xl shadow-slate-950/30 backdrop-blur-sm",
+    glow:
+      "bg-[radial-gradient(circle_at_center,_rgba(59,130,246,0.18),_transparent_62%)] blur-3xl",
+    outline:
+      "text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.08)]",
+    link:
+      "inline-flex items-center gap-2 text-sm font-medium text-sky-300 transition-colors duration-200 hover:text-sky-200",
+    meta: "text-sm text-slate-400",
+  },
+  ctaBanner: {
+    shell: "relative overflow-hidden",
+    surface:
+      "relative isolate overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.035] p-8 shadow-xl shadow-slate-950/30 sm:p-10 lg:p-12",
+    grid: "grid gap-8 lg:grid-cols-[minmax(0,1.2fr)_auto] lg:items-center",
+    title:
+      "max-w-2xl text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl lg:text-5xl",
+    description:
+      "mt-4 max-w-xl text-base leading-7 text-slate-300 sm:text-[1.0625rem] sm:leading-8",
+    actions: "flex flex-col gap-3 sm:flex-row",
+    bgLabel:
+      "pointer-events-none absolute -right-6 top-1/2 -translate-y-1/2 select-none text-[clamp(3.5rem,12vw,8rem)] font-black uppercase tracking-[0.18em] text-transparent [text-shadow:0_0_1px_rgba(255,255,255,0.06)] [-webkit-text-stroke:1px_rgba(255,255,255,0.08)]",
+    bgLabelCompact:
+      "pointer-events-none absolute -right-4 top-1/2 -translate-y-1/2 select-none text-[clamp(2.75rem,9vw,6rem)] font-black uppercase tracking-[0.18em] text-transparent [text-shadow:0_0_1px_rgba(255,255,255,0.06)] [-webkit-text-stroke:1px_rgba(255,255,255,0.08)]",
+  },
+  footer: {
+    shell: "relative overflow-hidden",
+    brand:
+      "text-3xl font-black tracking-[0.2em] text-white sm:text-4xl lg:text-5xl",
+    title: "text-sm font-semibold uppercase tracking-[0.22em] text-slate-500",
+    link:
+      "text-sm text-slate-400 transition-colors duration-200 hover:text-white",
+    meta: "text-sm text-slate-500",
+  },
 } as const;
 
 export type Tokens = typeof tokens;
