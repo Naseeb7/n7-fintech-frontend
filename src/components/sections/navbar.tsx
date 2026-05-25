@@ -59,7 +59,10 @@ export function Navbar() {
             </div>
 
             <div className="hidden sm:flex">
-              <Button variant="secondary">
+              <Button
+                variant="secondary"
+                className="py-1.25 text-xs w-full rounded-md"
+              >
                 REQUEST DEMO
               </Button>
             </div>
