@@ -45,6 +45,12 @@ export const tokens = {
     secondary:
       "border border-slate-200 bg-transparent text-slate-900 hover:bg-slate-50",
   },
+  card: {
+    base:
+      "rounded-[16px] border border-slate-800/80 bg-slate-950 p-6 text-white shadow-sm shadow-slate-950/10 sm:p-8",
+    minimal:
+      "rounded-[16px] border border-slate-200 bg-transparent p-6 text-slate-900 sm:p-8",
+  },
 } as const;
 
 export type Tokens = typeof tokens;
