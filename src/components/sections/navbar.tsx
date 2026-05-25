@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { Chivo_Mono } from "next/font/google";
+import { ChevronDown } from "lucide-react";
 
 import { Container } from "@/components/layout/container";
 import { Button } from "@/components/ui/button";
@@ -9,40 +11,55 @@ import { tokens } from "@/styles/tokens";
 import { cn } from "@/utils/cn";
 
 const navigationItems = [
-  { label: "SOLUTIONS", href: "#solutions" },
-  { label: "RESOURCES", href: "#resources" },
-  { label: "ABOUT US", href: "#about-us" },
+  { label: "SOLUTIONS", href: "#solutions", hasDropdown: true },
+  { label: "RESOURCES", href: "#resources", hasDropdown: true },
+  { label: "ABOUT US", href: "#about-us", hasDropdown: false },
 ] as const;
+
+const chivoMono = Chivo_Mono({
+  subsets: ["latin"],
+  weight: ["500"],
+});
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
     <header className={tokens.navbar.shell}>
-      <Container className="max-w-6xl px-0">
+      <Container className="max-w-5xl px-0">
         <nav
           aria-label="Primary"
-          className={tokens.navbar.container}
+          className={cn(tokens.navbar.container, chivoMono.className)}
         >
           <div className={tokens.navbar.inner}>
-            <Link href="/" className={tokens.navbar.brand}>
-              <span
-                aria-hidden="true"
-                className="h-2.5 w-2.5 rounded-full bg-gradient-to-r from-sky-400 to-indigo-500"
-              />
-              NOVA
+            <Link href="/" className={cn(tokens.navbar.brand, "font-sans")}>
+              N7
             </Link>
 
             <div className="hidden flex-1 items-center justify-center gap-8 sm:flex">
               {navigationItems.map((item) => (
-                <Link key={item.label} href={item.href} className={tokens.navbar.link}>
-                  {item.label}
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className={tokens.navbar.link}
+                >
+                  <span className="flex items-center gap-1">
+                    {item.label}
+                    {item.hasDropdown ? (
+                      <ChevronDown
+                        aria-hidden="true"
+                        size={13.73}
+                        className="shrink-0"
+                        strokeWidth={2.5}
+                      />
+                    ) : null}
+                  </span>
                 </Link>
               ))}
             </div>
 
-            <div className="ml-auto hidden sm:block">
-              <Button variant="secondary" className="border-white/10 bg-white/5 text-white hover:bg-white/10">
+            <div className="hidden sm:flex">
+              <Button variant="secondary">
                 REQUEST DEMO
               </Button>
             </div>
@@ -50,7 +67,9 @@ export function Navbar() {
             <button
               type="button"
               className={tokens.navbar.toggle}
-              aria-label={open ? "Close navigation menu" : "Open navigation menu"}
+              aria-label={
+                open ? "Close navigation menu" : "Open navigation menu"
+              }
               aria-expanded={open}
               aria-controls="primary-navigation"
               onClick={() => setOpen((current) => !current)}
@@ -84,14 +103,16 @@ export function Navbar() {
           >
             <div className="flex flex-col gap-1">
               {navigationItems.map((item) => (
-                <Link key={item.label} href={item.href} className={tokens.navbar.mobileLink} onClick={() => setOpen(false)}>
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className={tokens.navbar.mobileLink}
+                  onClick={() => setOpen(false)}
+                >
                   {item.label}
                 </Link>
               ))}
-              <Button
-                variant="secondary"
-                className="mt-2 w-full border-white/10 bg-white/5 text-white hover:bg-white/10"
-              >
+              <Button variant="secondary" className="mt-2 w-full">
                 REQUEST DEMO
               </Button>
             </div>

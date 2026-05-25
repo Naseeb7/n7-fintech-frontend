@@ -33,73 +33,64 @@ export const tokens = {
     },
     text: {
       base: "text-base leading-7 text-slate-200 sm:text-[1.0625rem] sm:leading-8",
-      muted: "text-base leading-7 text-slate-400 sm:text-[1.0625rem] sm:leading-8",
+      muted:
+        "text-base leading-7 text-slate-400 sm:text-[1.0625rem] sm:leading-8",
       sm: "text-sm leading-6 text-slate-200",
     },
   },
   button: {
-    base:
-      "inline-flex h-11 items-center justify-center gap-2 whitespace-nowrap rounded-[10px] px-5 text-sm font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+    base: "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-[10px] text-sm font-medium transition-colors duration-200 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50",
     primary:
       "bg-gradient-to-r from-sky-500 via-blue-600 to-indigo-600 text-white shadow-sm shadow-blue-950/10 hover:brightness-105",
-    secondary:
-      "border border-white/10 bg-white/5 text-white hover:bg-white/10",
+    secondary: "border border-white py-[15px] text-foreground hover:bg-white/5",
   },
   card: {
-    base:
-      "rounded-[16px] border border-white/10 bg-slate-950/80 p-6 text-white shadow-sm shadow-slate-950/20 backdrop-blur-sm sm:p-8",
+    base: "rounded-[16px] border border-white/10 bg-slate-950/80 p-6 text-white shadow-sm shadow-slate-950/20 backdrop-blur-sm sm:p-8",
     minimal:
       "rounded-[16px] border border-white/10 bg-white/[0.02] p-6 text-white sm:p-8",
   },
   navbar: {
-    shell: "sticky top-4 z-50 w-full px-4 sm:px-6 lg:px-8",
+    shell: "sticky top-[31px] z-50 w-full px-2 sm:px-[10px]",
     container:
-      "mx-auto w-full max-w-6xl rounded-[12px] border border-white/10 bg-slate-950/80 shadow-lg shadow-slate-950/20 backdrop-blur-xl",
-    inner: "flex items-center gap-3 px-4 py-3 sm:px-5",
+      "mx-auto w-full max-w-5xl rounded-xl border border-white/10 bg-[#2F2F2FB2] shadow-lg shadow-slate-950/20 backdrop-blur-xl py-[9px] px-[10px]",
+    inner: "flex items-center gap-3 ",
     brand:
-      "inline-flex items-center gap-2 text-sm font-semibold tracking-[0.18em] text-white uppercase",
-    link:
-      "text-sm font-medium tracking-wide text-slate-300 transition-colors duration-200 hover:text-white",
-    mobilePanel:
-      "border-t border-white/10 px-4 pb-4 pt-3 sm:hidden",
+      "inline-flex items-center gap-2 text-[24px] font-medium tracking-normal text-[color:var(--foreground)]",
+    link: "text-xs font-medium leading-[130%] tracking-wide text-[color:var(--foreground)] transition-colors duration-200 hover:text-white",
+    mobilePanel: "border-t border-white/10 px-4 pb-4 pt-3 sm:hidden",
     mobileLink:
-      "block rounded-[10px] px-3 py-2 text-sm font-medium text-slate-200 transition-colors duration-200 hover:bg-white/5 hover:text-white",
+      "block rounded-[10px] px-3 py-2 text-sm font-medium leading-[130%] text-[color:var(--foreground)] transition-colors duration-200 hover:bg-white/5 hover:text-white",
     toggle:
-      "inline-flex h-11 w-11 items-center justify-center rounded-[10px] border border-white/10 bg-white/5 text-white transition-colors duration-200 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 sm:hidden",
+      "inline-flex h-11 w-11 items-center justify-center rounded-[10px] border border-white/10 bg-white/5 text-[color:var(--foreground)] transition-colors duration-200 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 sm:hidden",
   },
   hero: {
     shell: "relative overflow-hidden",
     content: "max-w-2xl",
-    eyebrow:
-      "text-sm font-semibold uppercase tracking-[0.22em] text-sky-300",
-    lead:
-      "mt-6 max-w-xl text-base leading-7 text-slate-300 sm:text-[1.0625rem] sm:leading-8",
+    eyebrow: "text-sm font-semibold uppercase tracking-[0.22em] text-sky-300",
+    lead: "mt-6 max-w-xl text-base leading-7 text-slate-300 sm:text-[1.0625rem] sm:leading-8",
     ctaGroup: "mt-8 flex flex-col gap-3 sm:flex-row",
     trustWrap: "mt-12 border-t border-white/10 pt-8",
-    trustLabel: "text-xs font-semibold uppercase tracking-[0.2em] text-slate-500",
+    trustLabel:
+      "text-xs font-semibold uppercase tracking-[0.2em] text-slate-500",
     trustList:
       "mt-4 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm font-medium text-slate-400",
   },
   section: {
     intro: "max-w-2xl",
-    eyebrow:
-      "text-xs font-semibold uppercase tracking-[0.24em] text-sky-300",
+    eyebrow: "text-xs font-semibold uppercase tracking-[0.24em] text-sky-300",
     title:
       "text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl lg:text-5xl",
     titleLg:
       "text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl lg:text-6xl",
     description:
       "mt-5 max-w-xl text-base leading-7 text-slate-300 sm:text-[1.0625rem] sm:leading-8",
-    surface:
-      "rounded-[28px] border border-white/10 bg-white/[0.03]",
+    surface: "rounded-[28px] border border-white/10 bg-white/[0.03]",
     surfaceDark:
       "rounded-[28px] border border-white/10 bg-slate-950/70 shadow-2xl shadow-slate-950/30 backdrop-blur-sm",
-    glow:
-      "bg-[radial-gradient(circle_at_center,_rgba(59,130,246,0.18),_transparent_62%)] blur-3xl",
+    glow: "bg-[radial-gradient(circle_at_center,_rgba(59,130,246,0.18),_transparent_62%)] blur-3xl",
     outline:
       "text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.08)]",
-    link:
-      "inline-flex items-center gap-2 text-sm font-medium text-sky-300 transition-colors duration-200 hover:text-sky-200",
+    link: "inline-flex items-center gap-2 text-sm font-medium text-sky-300 transition-colors duration-200 hover:text-sky-200",
     meta: "text-sm text-slate-400",
   },
   ctaBanner: {
@@ -122,8 +113,7 @@ export const tokens = {
     brand:
       "text-3xl font-black tracking-[0.2em] text-white sm:text-4xl lg:text-5xl",
     title: "text-sm font-semibold uppercase tracking-[0.22em] text-slate-500",
-    link:
-      "text-sm text-slate-400 transition-colors duration-200 hover:text-white",
+    link: "text-sm text-slate-400 transition-colors duration-200 hover:text-white",
     meta: "text-sm text-slate-500",
   },
 } as const;
