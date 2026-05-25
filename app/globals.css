@@ -2,7 +2,7 @@
 
 :root {
   --background: #000d12;
-  --foreground: #f5faff;
+  --foreground: #e9f4f9;
   --muted: #8aa0b4;
   --border: rgba(255, 255, 255, 0.08);
   --surface: rgba(255, 255, 255, 0.03);
@@ -14,7 +14,7 @@
   --color-muted: var(--muted);
   --color-border: var(--border);
   --color-surface: var(--surface);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-archivo);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -28,7 +28,7 @@ body {
   min-height: 100dvh;
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-archivo), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
