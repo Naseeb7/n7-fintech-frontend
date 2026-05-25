@@ -51,6 +51,22 @@ export const tokens = {
     minimal:
       "rounded-[16px] border border-slate-200 bg-transparent p-6 text-slate-900 sm:p-8",
   },
+  navbar: {
+    shell: "sticky top-4 z-50 w-full px-4 sm:px-6 lg:px-8",
+    container:
+      "mx-auto w-full max-w-6xl rounded-[12px] border border-white/10 bg-slate-950/80 shadow-lg shadow-slate-950/20 backdrop-blur-xl",
+    inner: "flex items-center gap-3 px-4 py-3 sm:px-5",
+    brand:
+      "inline-flex items-center gap-2 text-sm font-semibold tracking-[0.18em] text-white uppercase",
+    link:
+      "text-sm font-medium tracking-wide text-slate-300 transition-colors duration-200 hover:text-white",
+    mobilePanel:
+      "border-t border-white/10 px-4 pb-4 pt-3 sm:hidden",
+    mobileLink:
+      "block rounded-[10px] px-3 py-2 text-sm font-medium text-slate-200 transition-colors duration-200 hover:bg-white/5 hover:text-white",
+    toggle:
+      "inline-flex h-11 w-11 items-center justify-center rounded-[10px] border border-white/10 bg-white/5 text-white transition-colors duration-200 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 sm:hidden",
+  },
 } as const;
 
 export type Tokens = typeof tokens;
