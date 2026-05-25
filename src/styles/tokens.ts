@@ -69,7 +69,6 @@ export const tokens = {
   },
   hero: {
     shell: "relative overflow-hidden",
-    grid: "grid items-center gap-14 lg:grid-cols-[minmax(0,0.98fr)_minmax(0,1.02fr)] lg:gap-16",
     content: "max-w-2xl",
     eyebrow:
       "text-sm font-semibold uppercase tracking-[0.22em] text-sky-300",
@@ -80,20 +79,6 @@ export const tokens = {
     trustLabel: "text-xs font-semibold uppercase tracking-[0.2em] text-slate-500",
     trustList:
       "mt-4 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm font-medium text-slate-400",
-    mediaShell:
-      "relative isolate mx-auto w-full max-w-[640px]",
-    mediaGlow:
-      "absolute inset-0 -z-10 rounded-[32px] bg-[radial-gradient(circle_at_center,_rgba(59,130,246,0.28),_transparent_64%)] blur-2xl",
-    mediaPanel:
-      "relative overflow-hidden rounded-[28px] border border-white/10 bg-slate-950/70 shadow-2xl shadow-slate-950/30 backdrop-blur-sm",
-    mediaCanvas:
-      "relative aspect-[4/5] w-full bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.16),_transparent_38%),linear-gradient(180deg,_rgba(15,23,42,0.9)_0%,_rgba(2,6,23,0.96)_100%)]",
-    mediaBoard:
-      "absolute inset-5 rounded-[24px] border border-white/8 bg-white/[0.03] p-4 shadow-lg shadow-slate-950/30 sm:inset-6 sm:p-5",
-    floatingTop:
-      "absolute left-4 top-4 w-[44%] max-w-[220px] -rotate-2 sm:left-6 sm:top-6",
-    floatingBottom:
-      "absolute bottom-4 right-4 w-[48%] max-w-[240px] rotate-3 sm:bottom-6 sm:right-6",
   },
 } as const;
 
