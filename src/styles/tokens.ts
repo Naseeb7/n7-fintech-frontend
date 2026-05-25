@@ -37,6 +37,14 @@ export const tokens = {
       sm: "text-sm leading-6 text-slate-700",
     },
   },
+  button: {
+    base:
+      "inline-flex h-11 items-center justify-center gap-2 whitespace-nowrap rounded-[10px] px-5 text-sm font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+    primary:
+      "bg-gradient-to-r from-sky-500 via-blue-600 to-indigo-600 text-white shadow-sm shadow-blue-950/10 hover:brightness-105",
+    secondary:
+      "border border-slate-200 bg-transparent text-slate-900 hover:bg-slate-50",
+  },
 } as const;
 
 export type Tokens = typeof tokens;
