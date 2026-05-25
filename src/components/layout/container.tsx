@@ -6,10 +6,5 @@ import { cn } from "@/utils/cn";
 type ContainerProps = HTMLAttributes<HTMLDivElement>;
 
 export function Container({ className, ...props }: ContainerProps) {
-  return (
-    <div
-      className={cn(layout.container, "w-full", className)}
-      {...props}
-    />
-  );
+  return <div className={cn(layout.container, className)} {...props} />;
 }

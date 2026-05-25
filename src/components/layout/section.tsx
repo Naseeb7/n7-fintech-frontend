@@ -6,10 +6,5 @@ import { cn } from "@/utils/cn";
 type SectionProps = HTMLAttributes<HTMLElement>;
 
 export function Section({ className, ...props }: SectionProps) {
-  return (
-    <section
-      className={cn(layout.section, "w-full", className)}
-      {...props}
-    />
-  );
+  return <section className={cn(layout.section, className)} {...props} />;
 }
