@@ -22,6 +22,21 @@ export const tokens = {
     content: "1.5rem",
     sectionY: "5rem",
   },
+  typography: {
+    heading: {
+      1: "text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl",
+      2: "text-3xl font-semibold tracking-tight text-balance sm:text-4xl lg:text-5xl",
+      3: "text-2xl font-semibold tracking-tight text-balance sm:text-3xl",
+      4: "text-xl font-semibold tracking-tight text-balance sm:text-2xl",
+      5: "text-lg font-semibold tracking-tight text-balance sm:text-xl",
+      6: "text-base font-semibold tracking-tight text-balance sm:text-lg",
+    },
+    text: {
+      base: "text-base leading-7 text-slate-700 sm:text-[1.0625rem] sm:leading-8",
+      muted: "text-base leading-7 text-slate-500 sm:text-[1.0625rem] sm:leading-8",
+      sm: "text-sm leading-6 text-slate-700",
+    },
+  },
 } as const;
 
 export type Tokens = typeof tokens;
