@@ -49,7 +49,12 @@ function EditorialCard({
         featured && "lg:col-span-2",
       )}
     >
-      <article className={cn("grid gap-5", featured ? "sm:grid-cols-[1.1fr_0.9fr]" : "")}>
+      <article
+        className={cn(
+          "grid gap-5",
+          featured ? "sm:grid-cols-[1.1fr_0.9fr]" : "",
+        )}
+      >
         <div className="flex min-h-[180px] items-end rounded-[22px] border border-white/10 bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.16),_transparent_42%),linear-gradient(180deg,_rgba(15,23,42,0.92)_0%,_rgba(2,6,23,0.98)_100%)] p-5">
           <div className="space-y-3">
             <span className="text-xs uppercase tracking-[0.2em] text-sky-300">
@@ -62,7 +67,7 @@ function EditorialCard({
 
         <div className="flex flex-col justify-between">
           <div>
-            <h3 className="text-lg font-semibold tracking-tight text-white">
+            <h3 className="text-lg font-semibold tracking-tight ">
               {post.title}
             </h3>
             <div className="mt-4 flex items-center gap-3 text-sm text-slate-400">
@@ -93,12 +98,15 @@ export function InsightsSection() {
         <div className="grid gap-12 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:items-start">
           <div className={tokens.section.intro}>
             <p className={tokens.section.eyebrow}>Insights</p>
-            <Heading level={2} className={cn(tokens.section.title, "mt-4 max-w-xl")}>
+            <Heading
+              level={2}
+              className={cn(tokens.section.title, "mt-4 max-w-xl")}
+            >
               Get yourself up-to-speed on all the things happening in fintech
             </Heading>
             <Text className={tokens.section.description}>
-              Editorial coverage, product perspectives, and operational
-              guidance for teams building financial experiences.
+              Editorial coverage, product perspectives, and operational guidance
+              for teams building financial experiences.
             </Text>
 
             <div className="mt-8">

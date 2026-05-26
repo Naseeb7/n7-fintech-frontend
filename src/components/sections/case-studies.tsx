@@ -15,7 +15,10 @@ export function CaseStudiesSection() {
       <Container>
         <div className="text-center">
           <p className={tokens.section.eyebrow}>Case studies</p>
-          <Heading level={2} className={cn(tokens.section.title, "mx-auto mt-4 max-w-2xl")}>
+          <Heading
+            level={2}
+            className={cn(tokens.section.title, "mx-auto mt-4 max-w-2xl")}
+          >
             Our Case Studies
           </Heading>
           <Text className={cn(tokens.section.description, "mx-auto")}>
@@ -37,17 +40,21 @@ export function CaseStudiesSection() {
             >
               <div className="grid gap-6 lg:grid-cols-[minmax(0,0.95fr)_auto] lg:items-end">
                 <div>
-                  <div className="inline-flex h-12 items-center rounded-[14px] border border-white/10 bg-white/[0.04] px-4 text-sm font-semibold tracking-[0.2em] text-white">
+                  <div className="inline-flex h-12 items-center rounded-[14px] border border-white/10 bg-white/[0.04] px-4 text-sm font-semibold tracking-[0.2em] ">
                     Company / Logo
                   </div>
-                  <h3 className="mt-6 text-2xl font-semibold tracking-tight text-white">
+                  <h3 className="mt-6 text-2xl font-semibold tracking-tight ">
                     Driving operational clarity for a modern banking stack
                   </h3>
                   <Text muted className="mt-4">
                     Static showcase card for the strongest implementation story,
-                    with enough structure to support a later case-study deep dive.
+                    with enough structure to support a later case-study deep
+                    dive.
                   </Text>
-                  <Link href="#footer" className={cn(tokens.section.link, "mt-6")}>
+                  <Link
+                    href="#footer"
+                    className={cn(tokens.section.link, "mt-6")}
+                  >
                     Read more
                     <span aria-hidden="true">→</span>
                   </Link>
@@ -56,14 +63,14 @@ export function CaseStudiesSection() {
                 <div className="flex items-center justify-end gap-3">
                   <button
                     type="button"
-                    className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-white transition-colors hover:bg-white/10"
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.04]  transition-colors hover:bg-white/10"
                     aria-label="Previous case study"
                   >
                     ←
                   </button>
                   <button
                     type="button"
-                    className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-white transition-colors hover:bg-white/10"
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.04]  transition-colors hover:bg-white/10"
                     aria-label="Next case study"
                   >
                     →
