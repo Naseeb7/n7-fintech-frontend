@@ -39,10 +39,10 @@ export const tokens = {
     },
   },
   button: {
-    base: "flex items-center justify-center gap-2 whitespace-nowrap rounded-[10px] text-sm font-medium transition-colors duration-200 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 min-w-[158px] w-full",
+    base: "flex items-center justify-center gap-2 whitespace-nowrap rounded-[10px] text-sm font-medium font-[family-name:var(--font-chivo-mono)] transition-colors duration-200 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 min-w-[158px] w-full py-[15px]",
     primary:
-      "bg-gradient-to-r from-sky-500 via-blue-600 to-indigo-600 text-white shadow-sm shadow-blue-950/10 hover:brightness-105",
-    secondary: "border border-white py-[15px] text-foreground hover:bg-white/5",
+      "bg-gradient-to-r from-[#00B4FD] to-[#003ACE] text-white shadow-sm shadow-blue-950/10 hover:brightness-105",
+    secondary: "border border-white text-foreground hover:bg-white/5",
   },
   card: {
     base: "rounded-[16px] border border-white/10 bg-slate-950/80 p-6 text-white shadow-sm shadow-slate-950/20 backdrop-blur-sm sm:p-8",
@@ -65,15 +65,21 @@ export const tokens = {
   },
   hero: {
     shell: "relative overflow-hidden",
-    content: "max-w-2xl",
-    eyebrow: "text-sm font-semibold uppercase tracking-[0.22em] text-sky-300",
-    lead: "mt-6 max-w-xl text-base leading-7 text-slate-300 sm:text-[1.0625rem] sm:leading-8",
-    ctaGroup: "mt-8 flex flex-col gap-3 sm:flex-row",
-    trustWrap: "mt-12 border-t border-white/10 pt-8",
-    trustLabel:
-      "text-xs font-semibold uppercase tracking-[0.2em] text-slate-500",
+    split:
+      "grid items-center gap-12 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:gap-16",
+    content: "max-w-2xl gap-13 flex flex-col",
+    contentWrapper: "flex flex-col gap-4",
+    lead: "w-3/4 text-base",
+    ctaGroup: "flex flex-col gap-3 sm:gap-5 sm:flex-row",
+    trustWrap: "  flex flex-col gap-4",
+    trustLabel: "leading-[1.3]",
     trustList:
-      "mt-4 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm font-medium text-slate-400",
+      " flex flex-wrap items-center gap-x-8 gap-y-3 text-sm font-medium text-slate-400",
+    mediaWrap:
+      "relative isolate mx-auto flex w-full max-w-[720px] items-center justify-center overflow-visible",
+    mediaShadow:
+      "pointer-events-none absolute left-1/2 top-1/2 z-0 h-[110%] w-[75%] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-70 blur-[60px]",
+    mediaImage: "relative z-10 h-auto w-full max-w-[640px] object-contain",
   },
   section: {
     intro: "max-w-2xl",
