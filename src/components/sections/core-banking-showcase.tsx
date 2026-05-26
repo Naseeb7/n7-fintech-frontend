@@ -11,7 +11,10 @@ import Link from "next/link";
 
 export function CoreBankingShowcase() {
   return (
-    <Section id="core-banking" className="relative overflow-hidden">
+    <Section
+      id="core-banking"
+      className="relative overflow-hidden min-h-[70dvh] py-4"
+    >
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 z-0 left-[-20%]"

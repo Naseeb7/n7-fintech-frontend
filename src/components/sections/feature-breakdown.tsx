@@ -1,119 +1,74 @@
-import { Card } from "@/components/ui/card";
+import Image from "next/image";
+
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { Heading } from "@/components/ui/heading";
-import { Text } from "@/components/ui/text";
 import { tokens } from "@/styles/tokens";
 import { cn } from "@/utils/cn";
+import { Check } from "lucide-react";
 
-const featuresLeft = [
+const leftFeatures = [
   "Customer On-Boarding",
+  "Managing deposits and withdrawals",
   "Transaction management",
+  "Interest Calculation",
+  "Payments processing (cash, cheques, mandates, NEFT, RTGS etc)",
+];
+
+const rightFeatures = [
   "CRM Activities",
+  "Configuring New Banking Products",
+  "Loan disbursal and Loan management",
+  "Establishing criteria for minimum balances, interest rates, number of withdrawals allowed and so on.",
 ];
 
-const featuresRight = [
-  "Loan management",
-  "Payments processing",
-  "Configuring banking products",
-];
-
-function ChecklistGroup({ title, items }: { title: string; items: string[] }) {
+function ChecklistGroup({ items }: { items: string[] }) {
   return (
-    <Card variant="minimal" className="p-5">
-      <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">
-        {title}
-      </h3>
-      <ul className="mt-4 space-y-3">
-        {items.map((item) => (
-          <li
-            key={item}
-            className="flex items-start gap-3 text-sm text-slate-300"
-          >
-            <span className="mt-1 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-sky-400/30 bg-sky-400/10 text-[10px] font-semibold text-sky-200">
-              ✓
-            </span>
-            <span>{item}</span>
-          </li>
-        ))}
-      </ul>
-    </Card>
+    <ul className="flex flex-col gap-1 w-full">
+      {items.map((item) => (
+        <li key={item} className="flex items-start gap-3">
+          <span className="inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-linear-to-r from-[#00B4FD] to-[#003ACE] mt-1">
+            <Check height={10} width={10} />
+          </span>
+          <span className="leading-[1.3]">{item}</span>
+        </li>
+      ))}
+    </ul>
   );
 }
 
 export function FeatureBreakdownSection() {
   return (
-    <Section id="features" className="relative overflow-hidden">
-      <Container>
-        <div className="grid gap-12 lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)] lg:items-center">
-          <div className="order-2 lg:order-1">
-            <div className="relative">
-              <div
-                aria-hidden="true"
-                className="absolute -left-6 top-0 h-60 w-60 rounded-full bg-cyan-500/10 blur-3xl"
-              />
-              <Card
-                variant="default"
-                className="relative overflow-hidden p-6 sm:p-8"
-              >
-                <div className="rounded-[24px] border border-white/10 bg-white/[0.03] p-5">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-xs uppercase tracking-[0.2em] text-slate-400">
-                        Banking operations
-                      </p>
-                      <p className="mt-2 text-lg font-semibold ">
-                        Connected enterprise overview
-                      </p>
-                    </div>
-                    <div className="h-11 w-11 rounded-full border border-white/10 bg-white/5" />
-                  </div>
+    <Section
+      id="features"
+      className="relative overflow-hidden min-h-[70dvh] py-10 flex flex-col justify-center"
+    >
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 flex w-[60vw] justify-start">
+        <Image
+          src="/sections/images/featureBreakdown/featureBreakdown.webp"
+          alt="Feature breakdown dashboard"
+          width={720}
+          height={560}
+          className="h-auto w-auto max-w-none object-contain"
+          priority
+        />
+      </div>
 
-                  <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                    <div className="rounded-[18px] border border-white/10 bg-white/[0.04] p-4">
-                      <p className="text-[11px] uppercase tracking-[0.18em] text-slate-500">
-                        Queue status
-                      </p>
-                      <p className="mt-2 text-2xl font-semibold ">148</p>
-                    </div>
-                    <div className="rounded-[18px] border border-white/10 bg-white/[0.04] p-4">
-                      <p className="text-[11px] uppercase tracking-[0.18em] text-slate-500">
-                        Processing
-                      </p>
-                      <p className="mt-2 text-2xl font-semibold ">99.4%</p>
-                    </div>
-                    <div className="rounded-[18px] border border-white/10 bg-white/[0.04] p-4 sm:col-span-2">
-                      <div className="h-2 rounded-full bg-white/10">
-                        <div className="h-2 w-[72%] rounded-full bg-gradient-to-r from-sky-400 to-indigo-500" />
-                      </div>
-                      <p className="mt-3 text-sm text-slate-400">
-                        Systems operating in sync across service, risk, and
-                        payment flows.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </Card>
-            </div>
-          </div>
+      <Container className="relative z-10 flex flex-col items-end justify-center ">
+        <div className="flex flex-col w-2/5 justify-center gap-9">
+          <Heading
+            level={2}
+            className={cn(tokens.section.title, "font-normal sm:text-[27px]")}
+          >
+            Run a more efficient, flexible,and digitally connected corebanking
+            system
+          </Heading>
 
-          <div className="order-1 lg:order-2">
-            <p className={tokens.section.eyebrow}>Feature breakdown</p>
-            <Heading
-              level={2}
-              className={cn(tokens.section.title, "mt-4 max-w-xl")}
-            >
-              Run a more efficient, flexible,and digitally connected corebanking
-              system
-            </Heading>
-            <Text className={tokens.section.description}>
-              Enterprise-grade banking capabilities arranged for clear adoption
-              paths and easy operational scanning.
-            </Text>
-
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              <ChecklistGroup title="Core operations" items={featuresLeft} />
-              <ChecklistGroup title="Platform flows" items={featuresRight} />
+          <div className="flex flex-col gap-3">
+            <div className="font-semibold">What you will get:</div>
+            <div className="flex flex-col gap-1 sm:gap-2 sm:flex-row">
+              <ChecklistGroup items={leftFeatures} />
+              <ChecklistGroup items={rightFeatures} />
             </div>
           </div>
         </div>

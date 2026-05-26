@@ -24,8 +24,8 @@ export const tokens = {
   },
   typography: {
     heading: {
-      1: "text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl",
-      2: "text-3xl font-semibold tracking-tight text-balance sm:text-4xl lg:text-5xl",
+      1: "text-4xl font-semibold tracking-tight text-balance sm:text-5xl",
+      2: "text-3xl font-semibold tracking-tight text-balance sm:text-4xl",
       3: "text-2xl font-semibold tracking-tight text-balance sm:text-3xl",
       4: "text-xl font-semibold tracking-tight text-balance sm:text-2xl",
       5: "text-lg font-semibold tracking-tight text-balance sm:text-xl",
@@ -83,10 +83,8 @@ export const tokens = {
   section: {
     intro: "max-w-2xl",
     eyebrow: "text-xs font-semibold uppercase tracking-[0.24em] text-sky-300",
-    title:
-      "text-3xl font-semibold tracking-tight text-balance sm:text-4xl lg:text-5xl",
-    titleLg:
-      "text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl",
+    title: "text-3xl font-semibold tracking-tight text-balance sm:text-4xl",
+    titleLg: "text-4xl font-semibold tracking-tight text-balance sm:text-5xl",
     description: "max-w-xl text-base leading-[1.3",
     surface: "rounded-[28px] border border-white/10 bg-white/[0.03]",
     surfaceDark:
@@ -103,7 +101,7 @@ export const tokens = {
       "relative isolate overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.035] p-8 shadow-xl shadow-slate-950/30 sm:p-10 lg:p-12",
     grid: "grid gap-8 lg:grid-cols-[minmax(0,1.2fr)_auto] lg:items-center",
     title:
-      "max-w-2xl text-3xl font-semibold tracking-tight text-balance sm:text-4xl lg:text-5xl",
+      "max-w-2xl text-3xl font-semibold tracking-tight text-balance sm:text-4xl",
     description:
       "mt-4 max-w-xl text-base leading-7 text-slate-300 sm:text-[1.0625rem] sm:leading-8",
     actions: "flex flex-col gap-3 sm:flex-row",
@@ -114,7 +112,7 @@ export const tokens = {
   },
   footer: {
     shell: "relative overflow-hidden",
-    brand: "text-3xl font-black tracking-[0.2em] sm:text-4xl lg:text-5xl",
+    brand: "text-3xl font-black tracking-[0.2em] sm:text-4xl",
     title: "text-sm font-semibold uppercase tracking-[0.22em] text-slate-500",
     link: "text-sm text-slate-400 transition-colors duration-200 hover",
     meta: "text-sm text-slate-500",
