@@ -1,14 +1,9 @@
 import type { Metadata } from "next";
-import { Archivo, Chivo_Mono, Geist_Mono } from "next/font/google";
+import { Archivo, Chivo_Mono } from "next/font/google";
 import "./globals.css";
 
 const archivo = Archivo({
   variable: "--font-archivo",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
@@ -31,7 +26,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${archivo.variable} ${geistMono.variable} ${chivoMono.variable} h-full antialiased`}
+      className={`${archivo.variable} ${chivoMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

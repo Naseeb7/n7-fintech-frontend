@@ -24,12 +24,12 @@ export const tokens = {
   },
   typography: {
     heading: {
-      1: "text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl lg:text-6xl",
-      2: "text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl lg:text-5xl",
-      3: "text-2xl font-semibold tracking-tight text-balance text-white sm:text-3xl",
-      4: "text-xl font-semibold tracking-tight text-balance text-white sm:text-2xl",
-      5: "text-lg font-semibold tracking-tight text-balance text-white sm:text-xl",
-      6: "text-base font-semibold tracking-tight text-balance text-white sm:text-lg",
+      1: "text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl",
+      2: "text-3xl font-semibold tracking-tight text-balance sm:text-4xl lg:text-5xl",
+      3: "text-2xl font-semibold tracking-tight text-balance sm:text-3xl",
+      4: "text-xl font-semibold tracking-tight text-balance sm:text-2xl",
+      5: "text-lg font-semibold tracking-tight text-balance sm:text-xl",
+      6: "text-base font-semibold tracking-tight text-balance sm:text-lg",
     },
     text: {
       base: "text-base leading-7 text-slate-200 sm:text-[1.0625rem] sm:leading-8",
@@ -39,27 +39,26 @@ export const tokens = {
     },
   },
   button: {
-    base: "flex items-center justify-center gap-2 whitespace-nowrap rounded-[10px] text-sm font-medium font-[family-name:var(--font-chivo-mono)] transition-colors duration-200 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 min-w-[158px] w-full py-[15px]",
+    base: "flex items-center justify-center gap-2 whitespace-nowrap rounded-[10px] text-[15px] font-mono transition-colors duration-200 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 min-w-[158px] w-full py-[15px]",
     primary:
-      "bg-gradient-to-r from-[#00B4FD] to-[#003ACE] text-white shadow-sm shadow-blue-950/10 hover:brightness-105",
+      "bg-gradient-to-r from-[#00B4FD] to-[#003ACE] shadow-sm shadow-blue-950/10 hover:brightness-105",
     secondary: "border border-white text-foreground hover:bg-white/5",
   },
   card: {
-    base: "rounded-[16px] border border-white/10 bg-slate-950/80 p-6 text-white shadow-sm shadow-slate-950/20 backdrop-blur-sm sm:p-8",
-    minimal:
-      "rounded-[16px] border border-white/10 bg-white/[0.02] p-6 text-white sm:p-8",
+    base: "rounded-[16px] border border-white/10 bg-slate-950/80 p-6 shadow-sm shadow-slate-950/20 backdrop-blur-sm sm:p-8",
+    minimal: "rounded-[16px] bg-transparent p-6 sm:p-8",
   },
   navbar: {
     shell: "sticky top-[31px] z-50 w-full px-2 sm:px-[10px]",
     container:
-      "mx-auto w-full max-w-5xl rounded-xl border border-white/10 bg-[#2F2F2FB2] shadow-lg shadow-slate-950/20 backdrop-blur-xl py-[9px] px-[10px]",
+      "mx-auto w-full max-w-5xl rounded-xl bg-[#2F2F2FB2] shadow-lg shadow-slate-950/20 backdrop-blur-xl py-[9px] px-[10px]",
     inner: "flex items-center gap-3 ",
     brand:
       "inline-flex items-center gap-2 text-[24px] font-medium tracking-normal text-[color:var(--foreground)]",
-    link: "text-xs font-medium leading-[130%] tracking-wide text-[color:var(--foreground)] transition-colors duration-200 hover:text-white",
+    link: "text-xs font-medium leading-[130%] tracking-wide text-[color:var(--foreground)] transition-colors duration-200 hover",
     mobilePanel: "border-t border-white/10 px-4 pb-4 pt-3 sm:hidden",
     mobileLink:
-      "block rounded-[10px] px-3 py-2 text-sm font-medium leading-[130%] text-[color:var(--foreground)] transition-colors duration-200 hover:bg-white/5 hover:text-white",
+      "block rounded-[10px] px-3 py-2 text-sm font-medium leading-[130%] text-[color:var(--foreground)] transition-colors duration-200 hover:bg-white/5 hover",
     toggle:
       "inline-flex h-11 w-11 items-center justify-center rounded-[10px] border border-white/10 bg-white/5 text-[color:var(--foreground)] transition-colors duration-200 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 sm:hidden",
   },
@@ -85,11 +84,10 @@ export const tokens = {
     intro: "max-w-2xl",
     eyebrow: "text-xs font-semibold uppercase tracking-[0.24em] text-sky-300",
     title:
-      "text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl lg:text-5xl",
+      "text-3xl font-semibold tracking-tight text-balance sm:text-4xl lg:text-5xl",
     titleLg:
-      "text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl lg:text-6xl",
-    description:
-      "mt-5 max-w-xl text-base leading-7 text-slate-300 sm:text-[1.0625rem] sm:leading-8",
+      "text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl",
+    description: "max-w-xl text-base leading-[1.3",
     surface: "rounded-[28px] border border-white/10 bg-white/[0.03]",
     surfaceDark:
       "rounded-[28px] border border-white/10 bg-slate-950/70 shadow-2xl shadow-slate-950/30 backdrop-blur-sm",
@@ -105,7 +103,7 @@ export const tokens = {
       "relative isolate overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.035] p-8 shadow-xl shadow-slate-950/30 sm:p-10 lg:p-12",
     grid: "grid gap-8 lg:grid-cols-[minmax(0,1.2fr)_auto] lg:items-center",
     title:
-      "max-w-2xl text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl lg:text-5xl",
+      "max-w-2xl text-3xl font-semibold tracking-tight text-balance sm:text-4xl lg:text-5xl",
     description:
       "mt-4 max-w-xl text-base leading-7 text-slate-300 sm:text-[1.0625rem] sm:leading-8",
     actions: "flex flex-col gap-3 sm:flex-row",
@@ -116,10 +114,9 @@ export const tokens = {
   },
   footer: {
     shell: "relative overflow-hidden",
-    brand:
-      "text-3xl font-black tracking-[0.2em] text-white sm:text-4xl lg:text-5xl",
+    brand: "text-3xl font-black tracking-[0.2em] sm:text-4xl lg:text-5xl",
     title: "text-sm font-semibold uppercase tracking-[0.22em] text-slate-500",
-    link: "text-sm text-slate-400 transition-colors duration-200 hover:text-white",
+    link: "text-sm text-slate-400 transition-colors duration-200 hover",
     meta: "text-sm text-slate-500",
   },
 } as const;
