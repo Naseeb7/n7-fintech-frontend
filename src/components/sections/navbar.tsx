@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Chivo_Mono } from "next/font/google";
 import { ChevronDown } from "lucide-react";
 
 import { Container } from "@/components/layout/container";
@@ -16,20 +15,15 @@ const navigationItems = [
   { label: "ABOUT US", href: "#about-us", hasDropdown: false },
 ] as const;
 
-const chivoMono = Chivo_Mono({
-  subsets: ["latin"],
-  weight: ["500"],
-});
-
 export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
     <header className={tokens.navbar.shell}>
-      <Container className="max-w-5xl px-0">
+      <Container className="max-w-5xl px-0 mx-auto">
         <nav
           aria-label="Primary"
-          className={cn(tokens.navbar.container, chivoMono.className)}
+          className={cn(tokens.navbar.container, "font-mono")}
         >
           <div className={tokens.navbar.inner}>
             <Link href="/" className={cn(tokens.navbar.brand, "font-sans")}>
