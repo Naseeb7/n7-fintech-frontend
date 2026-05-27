@@ -1,9 +1,7 @@
 import Image from "next/image";
 import { Card } from "./card";
-import { Text } from "./text";
 import Link from "next/link";
 import { cn } from "@/utils/cn";
-import { tokens } from "@/styles/tokens";
 import { Button } from "./button";
 import { Heading } from "./heading";
 
@@ -65,8 +63,9 @@ export function EditorialCard({
             <Image
               src={company}
               alt={"company"}
-              fill
-              className="h-auto w-auto object-contain"
+              height={24}
+              width={30}
+              className="h-10 w-30 object-contain"
             />
           )}
         </div>

@@ -28,9 +28,9 @@ export default function Home() {
         <InsightsSection />
         <CaseStudiesSection />
         <CtaBanner
-          variant="n7"
+          variant="default"
           title="Take the full advantage of going paper-less now."
-          description="N7 helps your financial institution improve the client experience, automate and optimize procedures, simplify banking operations "
+          description="CB7 helps your financial institution improve the client experience, automate and optimize procedures, simplify banking operations  "
           primaryLabel="REQUEST DEMO"
           secondaryLabel="CONTACT US"
         />

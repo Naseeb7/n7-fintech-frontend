@@ -1,123 +1,139 @@
-import Link from "next/link";
+"use client";
 
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import { useState } from "react";
+import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
 import { tokens } from "@/styles/tokens";
 import { cn } from "@/utils/cn";
+import { EditorialCard } from "../ui/editorialCard";
+import { Button } from "../ui/button";
+
+const caseStudies = [
+  {
+    company: "/sections/images/hero/trustedBy/zoomerr.webp",
+    title: "Driving operational clarity for a modern banking stack",
+    author: "N7 Editorial",
+    date: "May 2026",
+    href: "#footer",
+    image: true,
+  },
+  {
+    company: "/sections/images/hero/trustedBy/zoomerr.webp",
+    title: "Reducing complexity across lending and servicing flows",
+    author: "Priya Anand",
+    date: "April 2026",
+    href: "#insights",
+    image: true,
+  },
+  {
+    company: "/sections/images/hero/trustedBy/zoomerr.webp",
+    title: "Scaling a digital-first platform without sacrificing control",
+    author: "Mia Chen",
+    date: "March 2026",
+    href: "#solutions",
+    image: true,
+  },
+] as const;
 
 export function CaseStudiesSection() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const previousIndex =
+    (activeIndex + caseStudies.length - 1) % caseStudies.length;
+  const nextIndex = (activeIndex + 1) % caseStudies.length;
+
+  const goPrevious = () =>
+    setActiveIndex((current) =>
+      current === 0 ? caseStudies.length - 1 : current - 1,
+    );
+
+  const goNext = () =>
+    setActiveIndex((current) =>
+      current === caseStudies.length - 1 ? 0 : current + 1,
+    );
+
+  const visibleStudies = [
+    caseStudies[previousIndex],
+    caseStudies[activeIndex],
+    caseStudies[nextIndex],
+  ];
+
   return (
     <Section id="case-studies" className="relative overflow-hidden">
-      <Container>
+      <Container className="gap-18 flex flex-col">
         <div className="text-center">
-          <p className={tokens.section.eyebrow}>Case studies</p>
-          <Heading
-            level={2}
-            className={cn(tokens.section.title, "mx-auto mt-4 max-w-2xl")}
-          >
+          <Heading level={2} className={cn(tokens.section.title, "")}>
             Our Case Studies
           </Heading>
-          <Text className={cn(tokens.section.description, "mx-auto")}>
-            A curated snapshot of outcomes, operating models, and product
-            transformations across modern financial services teams.
-          </Text>
         </div>
 
-        <div className="relative mt-12">
-          <div
-            aria-hidden="true"
-            className="absolute left-1/2 top-10 h-80 w-80 -translate-x-1/2 rounded-full bg-sky-500/10 blur-3xl"
-          />
+        <div className="relative ">
+          <div className="relative mx-auto h-87.5 w-2/3">
+            {visibleStudies.map((study, index) => {
+              const isActive = index === 1;
+              const offsetClass =
+                index === 0
+                  ? "-translate-x-[16%] scale-[0.94] opacity-45 blur-[1px]"
+                  : index === 2
+                    ? "translate-x-[16%] scale-[0.94] opacity-45 blur-[1px]"
+                    : "translate-x-0 scale-100 opacity-100";
 
-          <div className="relative mx-auto max-w-5xl">
-            <Card
-              variant="minimal"
-              className="relative z-20 mx-auto max-w-3xl p-6 sm:p-8"
-            >
-              <div className="grid gap-6 lg:grid-cols-[minmax(0,0.95fr)_auto] lg:items-end">
-                <div>
-                  <div className="inline-flex h-12 items-center rounded-[14px] border border-white/10 bg-white/[0.04] px-4 text-sm font-semibold tracking-[0.2em] ">
-                    Company / Logo
-                  </div>
-                  <h3 className="mt-6 text-2xl font-semibold tracking-tight ">
-                    Driving operational clarity for a modern banking stack
-                  </h3>
-                  <Text muted className="mt-4">
-                    Static showcase card for the strongest implementation story,
-                    with enough structure to support a later case-study deep
-                    dive.
-                  </Text>
-                  <Link
-                    href="#footer"
-                    className={cn(tokens.section.link, "mt-6")}
-                  >
-                    Read more
-                    <span aria-hidden="true">→</span>
-                  </Link>
+              return (
+                <div
+                  key={study.title}
+                  className={cn(
+                    "absolute inset-0 transition-all duration-500 ease-out",
+                    offsetClass,
+                  )}
+                  style={{ zIndex: isActive ? 2 : 1 }}
+                >
+                  <EditorialCard {...study} />
                 </div>
-
-                <div className="flex items-center justify-end gap-3">
-                  <button
-                    type="button"
-                    className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.04]  transition-colors hover:bg-white/10"
-                    aria-label="Previous case study"
-                  >
-                    ←
-                  </button>
-                  <button
-                    type="button"
-                    className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.04]  transition-colors hover:bg-white/10"
-                    aria-label="Next case study"
-                  >
-                    →
-                  </button>
-                </div>
-              </div>
-            </Card>
-
-            <Card
-              variant="minimal"
-              className="absolute left-0 top-8 hidden w-56 -rotate-6 p-4 lg:block"
-            >
-              <p className="text-xs uppercase tracking-[0.2em] text-slate-500">
-                Preview
-              </p>
-              <p className="mt-3 text-sm text-slate-300">
-                Layered depth card for the backing visual system.
-              </p>
-            </Card>
-
-            <Card
-              variant="minimal"
-              className="absolute right-0 top-16 hidden w-56 rotate-6 p-4 lg:block"
-            >
-              <p className="text-xs uppercase tracking-[0.2em] text-slate-500">
-                Context
-              </p>
-              <p className="mt-3 text-sm text-slate-300">
-                Decorative support card to establish spatial hierarchy.
-              </p>
-            </Card>
+              );
+            })}
           </div>
-        </div>
 
-        <div className="mt-10 flex flex-col items-center justify-between gap-4 sm:flex-row">
-          <div className="flex items-center gap-2">
-            {Array.from({ length: 3 }).map((_, index) => (
-              <span
-                key={index}
-                className={cn(
-                  "h-2 w-2 rounded-full border border-white/20",
-                  index === 1 ? "bg-white" : "bg-white/20",
-                )}
-              />
-            ))}
+          <div className=" flex items-center justify-center gap-4">
+            <Button
+              aria-label="Previous case study"
+              variant="secondary"
+              onClick={goPrevious}
+              className="inline-flex h-11 w-11 min-w-11 items-center justify-center rounded-full border border-sky-500 text-sky-500 transition-colors duration-200"
+            >
+              <ArrowLeft size={18} />
+            </Button>
+
+            <div className="flex items-center gap-2">
+              {caseStudies.map((_, index) => (
+                <button
+                  key={index}
+                  type="button"
+                  aria-label={`Go to case study ${index + 1}`}
+                  aria-current={index === activeIndex}
+                  onClick={() => setActiveIndex(index)}
+                  className={cn(
+                    "h-2.5 rounded-full transition-all duration-200",
+                    index === activeIndex
+                      ? "w-8 bg-[#0B4B63]"
+                      : "w-2.5 border border-[#0B4B63]",
+                  )}
+                />
+              ))}
+            </div>
+
+            <Button
+              aria-label="Previous case study"
+              variant="secondary"
+              onClick={goPrevious}
+              className="inline-flex h-11 w-11 min-w-11 items-center justify-center rounded-full border border-sky-500 text-sky-500 transition-colors duration-200"
+            >
+              <ArrowRight size={18} />
+            </Button>
           </div>
-          <Button variant="secondary">VIEW ALL</Button>
         </div>
       </Container>
     </Section>

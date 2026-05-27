@@ -82,7 +82,7 @@ export const tokens = {
   },
   section: {
     eyebrow: "text-xs font-semibold uppercase tracking-[0.24em] text-sky-300",
-    title: "text-3xl font-semibold tracking-tight text-balance sm:text-4xl",
+    title: "text-3xl tracking-tight text-balance sm:text-4xl",
     titleLg: "text-4xl font-semibold tracking-tight text-balance sm:text-5xl",
     description: "max-w-xl text-base leading-[1.3",
     surface: "rounded-[28px] border border-white/10 bg-white/[0.03]",
