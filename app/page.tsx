@@ -19,21 +19,20 @@ export default function Home() {
         <CoreBankingShowcase />
         <FeatureBreakdownSection />
         <CtaBanner
+          variant="cb7"
           title="Take the full advantage of going paper-less now."
-          description="Digitize the parts of your banking workflow that slow teams down and unlock a cleaner operating rhythm."
+          description="CB7 helps your financial institution improve the client experience, automate and optimize procedures, simplify banking operations "
           primaryLabel="REQUEST DEMO"
           secondaryLabel="CONTACT US"
-          backgroundLabel="Paperless"
         />
         <InsightsSection />
         <CaseStudiesSection />
         <CtaBanner
-          compact
+          variant="n7"
           title="Take the full advantage of going paper-less now."
-          description="Keep the same premium structure in a simpler close-to-footer format for final conversion."
+          description="N7 helps your financial institution improve the client experience, automate and optimize procedures, simplify banking operations "
           primaryLabel="REQUEST DEMO"
           secondaryLabel="CONTACT US"
-          backgroundLabel="Scale"
         />
       </main>
 

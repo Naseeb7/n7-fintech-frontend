@@ -1,4 +1,5 @@
 import type { ComponentPropsWithoutRef } from "react";
+import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/layout/container";
@@ -9,50 +10,59 @@ import { cn } from "@/utils/cn";
 import { tokens } from "@/styles/tokens";
 
 type CtaBannerProps = ComponentPropsWithoutRef<"section"> & {
+  variant?: "cb7" | "n7";
   title: string;
   description: string;
   primaryLabel: string;
   secondaryLabel: string;
-  backgroundLabel?: string;
-  compact?: boolean;
 };
 
 export function CtaBanner({
+  variant = "cb7",
   title,
   description,
   primaryLabel,
   secondaryLabel,
-  backgroundLabel = "CTA",
-  compact = false,
   className,
   ...props
 }: CtaBannerProps) {
+  const backgroundMap = {
+    cb7: "/sections/images/ctaBanner/CB7_CTA.webp",
+    n7: "/sections/images/ctaBanner/N7.webp",
+  } as const;
+
   return (
     <Section className={cn(tokens.ctaBanner.shell, className)} {...props}>
       <Container>
         <div className={tokens.ctaBanner.surface}>
           <div
             aria-hidden="true"
-            className={compact ? tokens.ctaBanner.bgLabelCompact : tokens.ctaBanner.bgLabel}
+            className="pointer-events-none absolute inset-0 overflow-hidden rounded-4xl top-[-10%] "
           >
-            {backgroundLabel}
+            <Image
+              src={backgroundMap[variant]}
+              alt=""
+              fill
+              className={cn("object-contain", "object-right")}
+              sizes="(min-width: 1024px) 80vw, 100vw"
+            />
           </div>
 
-          <div className={tokens.ctaBanner.grid}>
-            <div className="relative z-10 max-w-2xl">
+          <div className={tokens.ctaBanner.body}>
+            <div className={tokens.ctaBanner.titleContainer}>
               <Heading level={2} className={tokens.ctaBanner.title}>
                 {title}
               </Heading>
-              <Text className={cn(tokens.ctaBanner.description, "mt-4 max-w-xl")}>
+              <Text className={cn(tokens.ctaBanner.description, "")}>
                 {description}
               </Text>
             </div>
 
-            <div className={cn(tokens.ctaBanner.actions, "relative z-10 lg:flex-col xl:flex-row")}>
-              <Button variant="secondary" className="w-full sm:w-auto">
+            <div className={tokens.ctaBanner.actions}>
+              <Button variant="secondary" className="w-1/2">
                 {secondaryLabel}
               </Button>
-              <Button variant="primary" className="w-full sm:w-auto">
+              <Button variant="primary" className="w-1/2">
                 {primaryLabel}
               </Button>
             </div>
