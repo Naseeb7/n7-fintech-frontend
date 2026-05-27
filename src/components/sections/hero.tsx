@@ -9,37 +9,37 @@ import { tokens } from "@/styles/tokens";
 
 const trustedBy = [
   {
-    src: "/sections/hero/trustedBy/shells.webp",
+    src: "/sections/images/hero/trustedBy/shells.webp",
     alt: "SHELLS",
     width: 73,
     height: 19,
   },
   {
-    src: "/sections/hero/trustedBy/smartfinder.webp",
+    src: "/sections/images/hero/trustedBy/smartfinder.webp",
     alt: "SmartFinder",
     width: 102,
     height: 19,
   },
   {
-    src: "/sections/hero/trustedBy/zoomerr.webp",
+    src: "/sections/images/hero/trustedBy/zoomerr.webp",
     alt: "Zoomerr",
     width: 77,
     height: 19,
   },
   {
-    src: "/sections/hero/trustedBy/artvenue.webp",
+    src: "/sections/images/hero/trustedBy/artvenue.webp",
     alt: "ArtVenue",
     width: 96,
     height: 19,
   },
   {
-    src: "/sections/hero/trustedBy/kontrastr.webp",
+    src: "/sections/images/hero/trustedBy/kontrastr.webp",
     alt: "kontrastR",
     width: 76,
     height: 17,
   },
   {
-    src: "/sections/hero/trustedBy/wavesmarathon.webp",
+    src: "/sections/images/hero/trustedBy/wavesmarathon.webp",
     alt: "WAVESMARATHON",
     width: 108,
     height: 19,
