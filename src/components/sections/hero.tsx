@@ -88,7 +88,7 @@ export function Hero() {
               }}
             />
             <Image
-              src="/sections/hero/hero.webp"
+              src="/sections/images/hero/hero.webp"
               alt="Fintech platform dashboard illustration"
               width={626}
               height={315}
