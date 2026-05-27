@@ -39,7 +39,7 @@ export const tokens = {
     },
   },
   button: {
-    base: "flex items-center justify-center gap-2 whitespace-nowrap rounded-[10px] text-[15px] font-mono transition-colors duration-200 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 min-w-[158px] w-full py-[15px]",
+    base: "flex items-center justify-center gap-2 whitespace-nowrap rounded-[10px] text-[15px] font-mono transition-colors duration-200 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 min-w-[158px] w-full py-[15px] h-fit",
     primary:
       "bg-gradient-to-r from-[#00B4FD] to-[#003ACE] shadow-sm shadow-blue-950/10 hover:brightness-105",
     secondary: "border border-white text-foreground hover:bg-white/5",
@@ -98,17 +98,12 @@ export const tokens = {
   ctaBanner: {
     shell: "relative overflow-hidden",
     surface:
-      "relative isolate overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.035] p-8 shadow-xl shadow-slate-950/30 sm:p-10 lg:p-12",
-    grid: "grid gap-8 lg:grid-cols-[minmax(0,1.2fr)_auto] lg:items-center",
-    title:
-      "max-w-2xl text-3xl font-semibold tracking-tight text-balance sm:text-4xl",
-    description:
-      "mt-4 max-w-xl text-base leading-7 text-slate-300 sm:text-[1.0625rem] sm:leading-8",
-    actions: "flex flex-col gap-3 sm:flex-row",
-    bgLabel:
-      "pointer-events-none absolute -right-6 top-1/2 -translate-y-1/2 select-none text-[clamp(3.5rem,12vw,8rem)] font-black uppercase tracking-[0.18em] text-transparent [text-shadow:0_0_1px_rgba(255,255,255,0.06)] [-webkit-text-stroke:1px_rgba(255,255,255,0.08)]",
-    bgLabelCompact:
-      "pointer-events-none absolute -right-4 top-1/2 -translate-y-1/2 select-none text-[clamp(2.75rem,9vw,6rem)] font-black uppercase tracking-[0.18em] text-transparent [text-shadow:0_0_1px_rgba(255,255,255,0.06)] [-webkit-text-stroke:1px_rgba(255,255,255,0.08)]",
+      "relative isolate overflow-hidden rounded-[32px] bg-linear-to-r from-[#031E2A] to-[40%] to-background px-17 py-20",
+    body: "flex w-full justify-between gap-8 flex-col lg:flex-row",
+    titleContainer: "relative z-10 flex flex-col gap-3 w-3/5",
+    title: "text-3xl sm:text-[52px] leading-[1.2] text-wrap max-w-4/5",
+    description: "leading[1.3] max-w-lg",
+    actions: "flex flex-col gap-10 sm:flex-row z-10 items-center w-2/5",
   },
   footer: {
     shell: "relative overflow-hidden",

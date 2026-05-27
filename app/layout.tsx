@@ -28,7 +28,9 @@ export default function RootLayout({
       lang="en"
       className={`${archivo.variable} ${chivoMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col max-w-[1520px] mx-auto">
+        {children}
+      </body>
     </html>
   );
 }

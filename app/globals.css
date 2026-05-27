@@ -45,3 +45,12 @@ body {
   background: rgba(59, 130, 246, 0.28);
   color: var(--foreground);
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
