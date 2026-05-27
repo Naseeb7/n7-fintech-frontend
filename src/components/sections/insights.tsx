@@ -5,6 +5,8 @@ import { Heading } from "@/components/ui/heading";
 import { tokens } from "@/styles/tokens";
 import { cn } from "@/utils/cn";
 import { EditorialCard } from "../ui/editorialCard";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const posts = [
   {
@@ -49,10 +51,19 @@ export function InsightsSection() {
           </Button>
         </div>
 
-        <div className="grid gap-4 lg:grid-cols-2 w-1/2">
-          <EditorialCard {...posts[0]} />
-          <EditorialCard {...posts[1]} />
-          <EditorialCard {...posts[2]} />
+        <div className="flex flex-col gap-4 w-1/2">
+          <div className="grid gap-4 lg:grid-cols-2">
+            {posts.map((post) => (
+              <EditorialCard key={post.href} {...post} />
+            ))}
+          </div>
+          <Link
+            href={"#insights"}
+            className="flex justify-end leading-[1.3] font-mono text-sm text-[#00B4FD] gap-2"
+          >
+            <span className="underline">READ</span> ALL INSIGHTS
+            <ArrowRight height={16} width={16} />
+          </Link>
         </div>
       </Container>
     </Section>
