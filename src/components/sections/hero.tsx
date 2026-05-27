@@ -50,12 +50,12 @@ export function Hero() {
   return (
     <Section className={tokens.hero.shell}>
       <Container className={tokens.hero.split}>
-        <div className={"flex items-center gap-16 flex-col lg:flex-row"}>
+        <div className="flex flex-col gap-12 lg:contents">
           <div className={tokens.hero.content}>
             <div className={tokens.hero.contentWrapper}>
               <Heading
                 level={1}
-                className="max-w-xl text-[67px] font-medium leading-[1.2]"
+                className="max-w-xl text-[42px] font-medium leading-[1.15] sm:text-[54px] lg:text-[67px] lg:leading-[1.2]"
               >
                 The new foundation of modern banking
               </Heading>
@@ -66,10 +66,10 @@ export function Hero() {
             </div>
 
             <div className={tokens.hero.ctaGroup}>
-              <Button variant="primary" className="w-full sm:w-1/3">
+              <Button variant="primary" className="w-full sm:w-1/2 lg:w-1/3">
                 REQUEST DEMO
               </Button>
-              <Button variant="secondary" className="w-full sm:w-1/3">
+              <Button variant="secondary" className="w-full sm:w-1/2 lg:w-1/3">
                 CONTACT US
               </Button>
             </div>

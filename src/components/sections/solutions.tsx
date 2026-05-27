@@ -45,7 +45,7 @@ const solutions = [
 export function SolutionsSection() {
   return (
     <Section id="solutions" className="overflow-hidden">
-      <Container className="relative flex justify-between">
+      <Container className="relative flex flex-col gap-12 lg:flex-row lg:justify-between">
         <div
           aria-hidden="true"
           className={cn(
@@ -53,22 +53,22 @@ export function SolutionsSection() {
             "pointer-events-none absolute right-0 bottom-[20%] h-80 w-[20rem] rounded-full blur-[80px] sm:h-96 sm:w-[24rem]",
           )}
         />
-        <div className="flex flex-col gap-12 ">
-          <Heading className="font-normal text-4xl leading-[1.2]">
+        <div className="flex w-full flex-col gap-12 lg:w-auto">
+          <Heading className="text-4xl font-normal leading-[1.2]">
             All of our solutions are tailor-made to your needs
           </Heading>
 
-          <div className="w-1/3">
+          <div className="w-full sm:w-1/2 lg:w-1/3">
             <Button variant="secondary">REQUEST DEMO</Button>
           </div>
         </div>
 
-        <div className="grid w-1/2 sm:gap-x-19 sm:gap-y-13 sm:grid-cols-2">
+        <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-x-19 sm:gap-y-13 lg:w-1/2">
           {solutions.map((solution) => (
             <Card
               key={solution.title}
               variant="minimal"
-              className=" transition-transform duration-200 hover:scale-101 sm:p-0 flex flex-col gap-6.5"
+              className="flex flex-col gap-6.5 p-6 transition-transform duration-200 hover:scale-101 sm:p-0"
             >
               <Image src={solution.icon} alt="" width={47} height={49} />
 

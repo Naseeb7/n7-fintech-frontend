@@ -39,7 +39,7 @@ export const tokens = {
     },
   },
   button: {
-    base: "flex items-center justify-center gap-2 whitespace-nowrap rounded-[10px] text-[15px] font-mono transition-colors duration-200 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 min-w-[158px] w-full py-[15px] h-fit",
+    base: "flex items-center justify-center gap-2 whitespace-nowrap rounded-[10px] text-[15px] font-mono transition-colors duration-200 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 min-w-[158px] w-full py-[10px] sm:py-[15px] h-fit",
     primary:
       "bg-gradient-to-r from-[#00B4FD] to-[#003ACE] shadow-sm shadow-blue-950/10 hover:brightness-105",
     secondary: "border border-white text-foreground hover:bg-white/5",
@@ -52,22 +52,23 @@ export const tokens = {
     shell: "sticky top-[31px] z-50 w-full px-2 sm:px-[10px]",
     container:
       "mx-auto w-full max-w-5xl rounded-xl bg-[#2F2F2FB2] shadow-lg shadow-slate-950/20 backdrop-blur-xl py-[9px] px-[10px]",
-    inner: "flex items-center gap-3 ",
+    inner: "flex items-center gap-3",
     brand:
       "inline-flex items-center gap-2 text-[24px] font-medium tracking-normal text-[color:var(--foreground)]",
-    link: "text-xs font-medium leading-[130%] tracking-wide text-[color:var(--foreground)] transition-colors duration-200 hover",
+    link: "hidden text-xs font-medium leading-[130%] tracking-wide text-[color:var(--foreground)] transition-colors duration-200 hover:text-white sm:inline-flex",
     mobilePanel: "border-t border-white/10 px-4 pb-4 pt-3 sm:hidden",
     mobileLink:
-      "block rounded-[10px] px-3 py-2 text-sm font-medium leading-[130%] text-[color:var(--foreground)] transition-colors duration-200 hover:bg-white/5 hover",
+      "block rounded-[10px] px-3 py-2 text-sm font-medium leading-[130%] text-[color:var(--foreground)] transition-colors duration-200 hover:bg-white/5 hover:text-white",
     toggle:
       "inline-flex h-11 w-11 items-center justify-center rounded-[10px] border border-white/10 bg-white/5 text-[color:var(--foreground)] transition-colors duration-200 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 sm:hidden",
   },
   hero: {
     shell: "relative overflow-hidden",
-    split: "flex justify-between gap-16 justify-center flex-col pt-20 sm:pt-40",
+    split:
+      "flex flex-col gap-12 pt-15 sm:pt-20 lg:pt-40 lg:grid lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:items-center lg:gap-16",
     content: "max-w-2xl gap-13 flex flex-col",
     contentWrapper: "flex flex-col gap-4",
-    lead: "w-3/4 text-base",
+    lead: "w-full text-base lg:w-3/4",
     ctaGroup: "flex flex-col gap-3 sm:gap-5 sm:flex-row",
     trustWrap: "  flex flex-col gap-4",
     trustLabel: "leading-[1.3]",
@@ -96,12 +97,14 @@ export const tokens = {
   ctaBanner: {
     shell: "relative overflow-hidden",
     surface:
-      "relative isolate overflow-hidden rounded-[32px] bg-linear-to-r from-[#031E2A] to-[40%] to-background px-17 py-20",
-    body: "flex w-full justify-between gap-8 flex-col lg:flex-row",
-    titleContainer: "relative z-10 flex flex-col gap-3 w-3/5",
-    title: "text-3xl sm:text-[52px] leading-[1.2] text-wrap max-w-4/5",
-    description: "leading[1.3] max-w-lg",
-    actions: "flex flex-col gap-10 sm:flex-row z-10 items-center w-2/5",
+      "relative isolate overflow-hidden rounded-[32px] bg-linear-to-r from-[#031E2A] to-[40%] to-background px-6 py-10 sm:px-10 sm:py-14 lg:px-17 lg:py-20",
+    body: "flex w-full flex-col justify-between gap-8 lg:flex-row",
+    titleContainer: "relative z-10 flex w-full flex-col gap-3 lg:w-3/5",
+    title:
+      "text-3xl leading-[1.2] text-wrap max-w-full sm:text-[52px] lg:max-w-4/5",
+    description: "max-w-full leading-[1.3] lg:max-w-lg",
+    actions:
+      "z-10 flex w-full flex-col items-center gap-4 sm:flex-row lg:w-2/5 lg:gap-10",
   },
   footer: {
     shell: "relative overflow-hidden",

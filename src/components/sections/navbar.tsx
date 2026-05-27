@@ -20,7 +20,7 @@ export function Navbar() {
 
   return (
     <header className={tokens.navbar.shell}>
-      <Container className="max-w-5xl px-0 mx-auto">
+      <Container className="mx-auto max-w-5xl px-0">
         <nav
           aria-label="Primary"
           className={cn(tokens.navbar.container, "font-mono")}
@@ -55,7 +55,7 @@ export function Navbar() {
             <div className="hidden sm:flex">
               <Button
                 variant="secondary"
-                className="py-1.25 text-xs w-full rounded-md"
+                className="w-full rounded-md py-1.25 text-xs"
               >
                 REQUEST DEMO
               </Button>
@@ -63,7 +63,7 @@ export function Navbar() {
 
             <button
               type="button"
-              className={tokens.navbar.toggle}
+              className={cn(tokens.navbar.toggle, "ml-auto")}
               aria-label={
                 open ? "Close navigation menu" : "Open navigation menu"
               }
@@ -109,7 +109,7 @@ export function Navbar() {
                   {item.label}
                 </Link>
               ))}
-              <Button variant="secondary" className="mt-2 w-full">
+              <Button variant="secondary" className="mt-2 w-full sm:hidden">
                 REQUEST DEMO
               </Button>
             </div>

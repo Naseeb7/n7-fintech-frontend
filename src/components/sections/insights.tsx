@@ -40,26 +40,26 @@ export function InsightsSection() {
           "pointer-events-none absolute left-[10%] bottom-0 h-[120%] w-1/3 rounded-full blur-[70px]",
         )}
       />
-      <Container className="flex justify-between">
-        <div className={"flex flex-col gap-12 w-1/3"}>
+      <Container className="flex flex-col gap-12 lg:flex-row lg:justify-between">
+        <div className="flex w-full flex-col gap-12 lg:w-1/3">
           <Heading level={2} className={cn(tokens.section.title, "text-wrap")}>
             Get yourself up-to-speed on all the things happening in fintech
           </Heading>
 
-          <Button variant="secondary" className="w-2/5">
+          <Button variant="secondary" className="w-full sm:w-2/5 lg:w-2/5">
             INSIGHTS
           </Button>
         </div>
 
-        <div className="flex flex-col gap-4 w-1/2">
-          <div className="grid gap-4 lg:grid-cols-2">
+        <div className="flex w-full flex-col gap-4 lg:w-1/2">
+          <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
             {posts.map((post) => (
               <EditorialCard key={post.href} {...post} />
             ))}
           </div>
           <Link
             href={"#insights"}
-            className="flex justify-end leading-[1.3] font-mono text-sm text-[#00B4FD] gap-2"
+            className="flex justify-start gap-2 font-mono text-sm leading-[1.3] text-[#00B4FD] lg:justify-end"
           >
             <span className="underline">READ</span> ALL INSIGHTS
             <ArrowRight height={16} width={16} />

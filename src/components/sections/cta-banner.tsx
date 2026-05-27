@@ -67,10 +67,10 @@ export function CtaBanner({
             </div>
 
             <div className={tokens.ctaBanner.actions}>
-              <Button variant="secondary" className="w-1/2">
+              <Button variant="secondary" className="w-full sm:w-1/2 lg:w-1/2">
                 {secondaryLabel}
               </Button>
-              <Button variant="primary" className="w-1/2">
+              <Button variant="primary" className="w-full sm:w-1/2 lg:w-1/2">
                 {primaryLabel}
               </Button>
             </div>

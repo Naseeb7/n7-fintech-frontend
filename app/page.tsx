@@ -13,7 +13,7 @@ export default function Home() {
     <div className="min-h-screen">
       <Navbar />
 
-      <main className="flex flex-col gap-32">
+      <main className="flex flex-col gap-16 md:gap-24 lg:gap-32">
         <Hero />
         <SolutionsSection />
         <CoreBankingShowcase />

@@ -1,12 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { Heading } from "@/components/ui/heading";
-import { Text } from "@/components/ui/text";
 import { tokens } from "@/styles/tokens";
 import { cn } from "@/utils/cn";
 import { EditorialCard } from "../ui/editorialCard";
@@ -64,7 +63,7 @@ export function CaseStudiesSection() {
 
   return (
     <Section id="case-studies" className="relative overflow-hidden">
-      <Container className="gap-18 flex flex-col">
+      <Container className="flex flex-col gap-18">
         <div className="text-center">
           <Heading level={2} className={cn(tokens.section.title, "")}>
             Our Case Studies
@@ -72,7 +71,7 @@ export function CaseStudiesSection() {
         </div>
 
         <div className="relative ">
-          <div className="relative mx-auto h-87.5 w-2/3">
+          <div className="relative mx-auto h-[32rem] w-full sm:h-[36rem] lg:h-87.5 lg:w-2/3">
             {visibleStudies.map((study, index) => {
               const isActive = index === 1;
               const offsetClass =
@@ -97,7 +96,7 @@ export function CaseStudiesSection() {
             })}
           </div>
 
-          <div className=" flex items-center justify-center gap-4">
+          <div className="flex  items-center justify-center gap-4 mt-4 sm:mt-0 ">
             <Button
               aria-label="Previous case study"
               variant="secondary"
@@ -126,9 +125,9 @@ export function CaseStudiesSection() {
             </div>
 
             <Button
-              aria-label="Previous case study"
+              aria-label="Next case study"
               variant="secondary"
-              onClick={goPrevious}
+              onClick={goNext}
               className="inline-flex h-11 w-11 min-w-11 items-center justify-center rounded-full border border-sky-500 text-sky-500 transition-colors duration-200"
             >
               <ArrowRight size={18} />
