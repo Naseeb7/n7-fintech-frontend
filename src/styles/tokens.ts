@@ -45,7 +45,7 @@ export const tokens = {
     secondary: "border border-white text-foreground hover:bg-white/5",
   },
   card: {
-    base: "rounded-[16px] border border-white/10 bg-slate-950/80 p-6 shadow-sm shadow-slate-950/20 backdrop-blur-sm sm:p-8",
+    base: "rounded-[18px] bg-[#01141B] p-4 sm:p-6 flex",
     minimal: "rounded-[16px] bg-transparent p-6 sm:p-8",
   },
   navbar: {
