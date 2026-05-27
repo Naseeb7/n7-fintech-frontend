@@ -50,50 +50,52 @@ export function Hero() {
   return (
     <Section className={tokens.hero.shell}>
       <Container className={tokens.hero.split}>
-        <div className={tokens.hero.content}>
-          <div className={tokens.hero.contentWrapper}>
-            <Heading
-              level={1}
-              className="max-w-xl text-[67px] font-medium leading-[1.2]"
-            >
-              The new foundation of modern banking
-            </Heading>
-            <Text className={tokens.hero.lead}>
-              We drive innovation and growth, provide seamless customer
-              experience and operational excellence
-            </Text>
+        <div className={"flex items-center gap-16 flex-col lg:flex-row"}>
+          <div className={tokens.hero.content}>
+            <div className={tokens.hero.contentWrapper}>
+              <Heading
+                level={1}
+                className="max-w-xl text-[67px] font-medium leading-[1.2]"
+              >
+                The new foundation of modern banking
+              </Heading>
+              <Text className={tokens.hero.lead}>
+                We drive innovation and growth, provide seamless customer
+                experience and operational excellence
+              </Text>
+            </div>
+
+            <div className={tokens.hero.ctaGroup}>
+              <Button variant="primary" className="w-full sm:w-1/3">
+                REQUEST DEMO
+              </Button>
+              <Button variant="secondary" className="w-full sm:w-1/3">
+                CONTACT US
+              </Button>
+            </div>
           </div>
 
-          <div className={tokens.hero.ctaGroup}>
-            <Button variant="primary" className="w-full sm:w-1/3">
-              REQUEST DEMO
-            </Button>
-            <Button variant="secondary" className="w-full sm:w-1/3">
-              CONTACT US
-            </Button>
+          <div className={tokens.hero.mediaWrap}>
+            <div
+              aria-hidden="true"
+              className={tokens.hero.mediaShadow}
+              style={{
+                background:
+                  "linear-gradient(103.43deg, #00B4FD -1.02%, #003ACE 83.53%)",
+                backdropFilter: "blur(100px)",
+                WebkitBackdropFilter: "blur(100px)",
+                opacity: 0.5,
+              }}
+            />
+            <Image
+              src="/sections/hero/hero.webp"
+              alt="Fintech platform dashboard illustration"
+              width={626}
+              height={315}
+              priority
+              className={tokens.hero.mediaImage}
+            />
           </div>
-        </div>
-
-        <div className={tokens.hero.mediaWrap}>
-          <div
-            aria-hidden="true"
-            className={tokens.hero.mediaShadow}
-            style={{
-              background:
-                "linear-gradient(103.43deg, #00B4FD -1.02%, #003ACE 83.53%)",
-              backdropFilter: "blur(100px)",
-              WebkitBackdropFilter: "blur(100px)",
-              opacity: 0.5,
-            }}
-          />
-          <Image
-            src="/sections/hero/hero.webp"
-            alt="Fintech platform dashboard illustration"
-            width={626}
-            height={315}
-            priority
-            className={tokens.hero.mediaImage}
-          />
         </div>
 
         <div

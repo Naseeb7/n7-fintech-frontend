@@ -64,8 +64,7 @@ export const tokens = {
   },
   hero: {
     shell: "relative overflow-hidden",
-    split:
-      "grid items-center gap-12 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:gap-16",
+    split: "flex justify-between gap-16 justify-center flex-col pt-20 sm:pt-40",
     content: "max-w-2xl gap-13 flex flex-col",
     contentWrapper: "flex flex-col gap-4",
     lead: "w-3/4 text-base",
