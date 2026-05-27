@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# N7 Fintech Frontend
+
+Premium fintech SaaS landing page built with Next.js App Router, TypeScript, and Tailwind CSS v4.
+
+## Overview
+
+This project implements a responsive marketing site for a fintech product, with a strong dark enterprise visual language, reusable layout primitives, and section-based composition.
+
+## Tech Stack
+
+- Next.js 16 App Router
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- `clsx`
+- `tailwind-merge`
+- `lucide-react`
+
+## Project Structure
+
+- `app/` - App Router entry points and global styles
+- `src/components/layout/` - reusable layout primitives
+- `src/components/ui/` - shared UI primitives
+- `src/components/sections/` - landing page sections
+- `src/styles/` - centralized design tokens
+- `public/sections/` - image and SVG assets used across the page
+
+## Features
+
+- Premium fintech-inspired landing page
+- Responsive navbar with mobile menu
+- Hero, solutions, core banking, feature breakdown, insights, case studies, CTA banners, footer
+- Shared design tokens for spacing, color, typography, and surfaces
+- Reusable primitives for buttons, cards, headings, text, container, and section wrappers
+- Optimized local image handling with `next/image`
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Scripts
 
-## Learn More
+- `npm run dev` - start the local dev server
+- `npm run build` - build the production app
+- `npm run start` - run the production build
+- `npm run lint` - run ESLint
 
-To learn more about Next.js, take a look at the following resources:
+## Notes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- The design is intentionally desktop-forward with responsive behavior added for tablet and mobile.
+- Shared styling values are centralized in `src/styles/tokens.ts`.
+- The project uses App Router best practices and keeps section composition modular.
