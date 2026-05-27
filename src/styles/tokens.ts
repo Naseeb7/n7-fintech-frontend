@@ -81,7 +81,6 @@ export const tokens = {
     mediaImage: "relative z-10 h-auto w-full max-w-[640px] object-contain",
   },
   section: {
-    intro: "max-w-2xl",
     eyebrow: "text-xs font-semibold uppercase tracking-[0.24em] text-sky-300",
     title: "text-3xl font-semibold tracking-tight text-balance sm:text-4xl",
     titleLg: "text-4xl font-semibold tracking-tight text-balance sm:text-5xl",
