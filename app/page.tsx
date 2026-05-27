@@ -7,6 +7,7 @@ import { CtaBanner } from "@/components/sections/cta-banner";
 import { InsightsSection } from "@/components/sections/insights";
 import { CaseStudiesSection } from "@/components/sections/case-studies";
 import { Footer } from "@/components/sections/footer";
+import MobileBanking from "@/components/sections/mobile-banking";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
           primaryLabel="REQUEST DEMO"
           secondaryLabel="CONTACT US"
         />
+        <MobileBanking />
         <InsightsSection />
         <CaseStudiesSection />
         <CtaBanner
